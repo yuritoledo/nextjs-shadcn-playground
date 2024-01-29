@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Button } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex">
+          <div className="bg-gray-100 w-72 h-screen sticky top-0 flex justify-center items-center">
+            SIDEBAR
+          </div>
+          <div className="flex-1">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
