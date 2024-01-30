@@ -7,12 +7,10 @@ type Props = {
 };
 
 const LinkText = ({ link, text }: Props) => (
-  <div className="flex items-center">
-    <Link href={link}>
-      <ExternalLink className="h-4 w-4 text-blue-400 mr-1" />
-    </Link>
+  <Link href={link} className="flex items-center">
+    <ExternalLink className="h-4 w-4 text-blue-400 mr-1" />
     {text}
-  </div>
+  </Link>
 );
 
 export default LinkText;
